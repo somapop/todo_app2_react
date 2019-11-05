@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import uuid from "uuid/v4";
+import moment from "moment";
 import logo from './images/tasq_logo_6.png';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -12,25 +13,52 @@ import "./App.css";
 class App extends Component {
   state = {
     tasks: [
-      { text: "Book Flights", completed: true, date: "2019-10-21", id: uuid() },
-      { text: "Wash The Car", completed: false, date: "2019-10-23", id: uuid() },
-      { text: "Book Gym Session", completed: true, date: "2019-10-25", id: uuid() },
-      { text: "Purchase Fruit", completed: true, date: "2019-10-25", id: uuid() },
-      { text: "Organise Vets", completed: false, date: "2019-10-26", id: uuid() },
+      { text: "Book Flights", completed: true, date: "2019-10-21", id: uuid(), dueBy: "2019-11-18"},
+      { text: "Wash The Car", completed: false, date: "2019-10-23", id: uuid(), dueBy: "2019-11-13"},
+      { text: "Book Gym Session", completed: true, date: "2019-10-25", id: uuid(), dueBy: "2019-10-18"},
+      { text: "Purchase Fruit", completed: true, date: "2019-10-25", id: uuid(), dueBy: "2019-11-19"},
+      { text: "Organise Vets", completed: false, date: "2019-10-26", id: uuid(), dueBy: "2019-11-22" },
     ]
-  }
+  };
   //This func should update the state with a new task
-  addNewTask = taskText => {
+  addNewTask = (taskText, dueByDate) => {
     const tasksCopy = this.state.tasks.slice();
+
     const newTask = {
       text: taskText,
       completed: false,
-      date: "2019-10-23",
-      id: 6
-    }
+      date: moment().format("YYYY-MM-DD"),
+      id: uuid(),
+      dueBy: dueByDate
+    };
+
     tasksCopy.push(newTask)
     this.setState({
       tasks: tasksCopy
+    });
+  }
+
+    deleteTask = id => {
+    const filteredTasks = this.state.tasks.filter(task => {
+      return task.id !== id
+    });
+
+    this.setState({
+      tasks: filteredTasks
+    });
+  }
+
+  completeTask = id => {
+    const updatedTasks = this.state.tasks.map(task => {
+      if (task.id === id) {
+        task.completed = true;
+      }
+
+      return task;
+    });
+
+    this.setState({
+      tasks: updatedTasks
     });
   }
 
@@ -39,11 +67,11 @@ class App extends Component {
     const completedTasks = this.state.tasks.filter(task => {
       return task.completed;
     })
-    const incompletedTasks = this.state.tasks.filter(task => {
-      return !task.completed;
-    })
-    console.log(completedTasks);
-    console.log(incompletedTasks);
+    const incompleteTasks = this.state.tasks.filter(task => {
+      return task.completed ? false : true;
+    });
+
+   
 
     return (
 
@@ -53,19 +81,23 @@ class App extends Component {
         <Footer />
         <Greet />
 
-
         <AddItem addNewTaskFunc={this.addNewTask} />
-
         <ItemCount count={this.state.tasks.length} />
-        <h2>TASQs 2DO</h2>
-        {incompletedTasks.map(task => {
-          return <Item text={task.text} completed={task.completed} key={task.id} />
+
+        <h2 style={{ padding: 20 }}>TASQs 2DO</h2>
+        {incompleteTasks.map(task => {
+          return (
+            <Item text={task.text} completed={task.completed} key={task.id} deleteTaskFunc={this.deleteTask} id={task.id} completeTaskFunc={this.completeTask} date={task.date} dueBy={task.dueBy} />
+          );
         })}
-        <h2>TASQs DONE</h2>
+
+        <h2 style={{ padding: 20 }}>TASQs DONE</h2>
+
         {completedTasks.map(task => {
-          return <Item text={task.text} completed={task.completed} key={task.id} />
+          return (
+            <Item text={task.text} completed={task.completed} key={task.id} deleteTaskFunc={this.deleteTask} id={task.id} date={task.date} dueBy={task.dueBy} />
+          );
         })}
-        <Item text="brush the cat" completed={true} />
       </div>
     );
   }
