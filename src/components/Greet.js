@@ -14,9 +14,19 @@ function Greet() {
         timeOfDay = "evening"
     }
 
+    const styles = {
+        color: "#FFF", 
+        backgroundColor: "#E96969", 
+        textAlign: "center", 
+        padding: 20, 
+        borderRadius: 10 
+
+    }
+
     return (
-        <h2 style={{ color: "#FFF", backgroundColor: "#E96969", textAlign: "center", padding: 20, borderRadius: 10 }}>Good {timeOfDay}!</h2>
+        <h2 style={styles}>Good {timeOfDay}!</h2>
     )
 }
+
 
 export default Greet

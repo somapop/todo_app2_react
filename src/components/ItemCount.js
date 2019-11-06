@@ -1,5 +1,14 @@
 import React from "react";
 
+const styles = {
+    color: "#32350a",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: 30,
+    margin: 0
+}
+
 class ItemCount extends React.Component {
     render() {
         return (
@@ -8,7 +17,10 @@ class ItemCount extends React.Component {
                     <div className="col-lg-8 mb-3 mb-sm-0 ">
                         <div className="input">
                             <div className="col-8 col-sm-12 text-center align-middle">
-                                <h5 style={{ color: "#32353a" }}>OUTSTANDING TASQs {this.props.count}
+
+
+                               
+                                <h5 style={styles}>OUTSTANDING TASQs {this.props.count}
                                     {/*<button type="button" className="btn btn-outline-info btn-md align-centre">3</button>*/}
                                 </h5>
                             </div>
