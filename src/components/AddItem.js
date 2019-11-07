@@ -2,6 +2,15 @@ import React from "react";
 import moment from "moment";
 //controlled Component
 
+const styles = {
+    color: "#FFF",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 25
+   
+}
+
 class AddItem extends React.Component {
 
     state = {
@@ -33,7 +42,6 @@ class AddItem extends React.Component {
     }
 
 
-
     render() {
         // JSX
         return (
@@ -52,14 +60,21 @@ class AddItem extends React.Component {
 
                 {/* this is a comment in JSX */}
                 <div className="form-group mx-sm-3 mb-2">
-                    <input type="date" onChange={this.handleDateChange} value={this.state.dateSelected} />
-                </div>
-                <button className="btn my-primary btn btn-space btn-sm my-small-btn" onClick={this.handleClick} disabled={this.state.newItemText.length === 0}>
-                    Add to List
+                    <input type="date" className="form-control" onChange={this.handleDateChange} value={this.state.dateSelected} />
+
+                    <button className="btn my-primary my-small - btn btn btn - sm" style={styles} onClick={this.handleClick} disabled={this.state.newItemText.length === 0}>
+                         Add to list
                  </button>
+                </div>
             </form>
         );
     }
 }
 
 export default AddItem;
+
+
+//save for the time being....
+//btn my - primary btn btn - space btn - sm my - small - btn//
+//btn my - primary my - small - btn btn btn - sm
+//btn btn - outline - tasq my - 2 my - sm - 0

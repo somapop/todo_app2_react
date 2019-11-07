@@ -7,6 +7,7 @@ const styles = {
     alignItems: "center",
     height: 30,
     margin: 0
+
 }
 
 class ItemCount extends React.Component {
@@ -15,8 +16,9 @@ class ItemCount extends React.Component {
             <div className="container">
                 <div className="row ToDoRow top-buffer">
                     <div className="col-lg-8 mb-3 mb-sm-0 ">
-                        <div className="input">
+                        <div className="input" className="form-control">
                             <div className="col-8 col-sm-12 text-center align-middle">
+                               
 
 
                                
@@ -28,6 +30,7 @@ class ItemCount extends React.Component {
                     </div>
                 </div>
             </div>
+          
         );
     }
 }
