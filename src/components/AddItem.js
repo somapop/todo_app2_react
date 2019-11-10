@@ -8,7 +8,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     marginLeft: 25
-   
+
 }
 
 class AddItem extends React.Component {
@@ -45,9 +45,9 @@ class AddItem extends React.Component {
     render() {
         // JSX
         return (
-            <form className="form-inline">
+            <form className="form-inline component">
                 <div className="form-group mx-sm-3 mb-2">
-                    <div className="component"></div>
+                    {/* <div className="component"></div> component class now is in the father element to get all child element with the same aling style */}
                     <input
                         type="text"
                         className="form-control"
@@ -63,7 +63,7 @@ class AddItem extends React.Component {
                     <input type="date" className="form-control" onChange={this.handleDateChange} value={this.state.dateSelected} />
 
                     <button className="btn my-primary my-small - btn btn btn - sm" style={styles} onClick={this.handleClick} disabled={this.state.newItemText.length === 0}>
-                         Add to list
+                        Add to list
                  </button>
                 </div>
             </form>

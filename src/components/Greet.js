@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import logo from '../images/tasq_logo_6.png';
 
 
 function Greet() {
@@ -14,17 +15,36 @@ function Greet() {
         timeOfDay = "evening"
     }
 
+    //const width = '80%';
     const styles = {
-        color: "#FFF", 
-        backgroundColor: "#E96969", 
-        textAlign: "center", 
-        padding: 20, 
-        borderRadius: 10 
+        color: "#FFF",
+        backgroundColor: "#E96969",
+        textAlign: "center",
+        width: 250,
+        padding: 20,
+        borderRadius: 10,
+        fontFamily: "Montserrat",
+        color: "white",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "right",
+        flexFlow: "row wrap",
+        //display: [
+        //'-webkit-box',
+        //'-webkit-flex',
+        //'-ms-flexbox',
+        //'flex'
+        // ],
+
 
     }
 
     return (
-        <h2 style={styles}>Good {timeOfDay}!</h2>
+        <div className="row ToDoRow top-buffer d-flex justify-content-center">
+
+            <h2 style={styles}  >Good {timeOfDay}!</h2>
+        </div>
+
     )
 }
 

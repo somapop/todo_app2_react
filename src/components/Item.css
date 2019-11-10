@@ -6,6 +6,8 @@ body {
 .component {
     margin-bottom: 30px;
     margin-top: 30px;
+    justify-content: center;
+    
 }
 
 .completed {

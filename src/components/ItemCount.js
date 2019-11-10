@@ -6,7 +6,8 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: 30,
-    margin: 0
+    margin: -3,
+
 
 }
 
@@ -14,23 +15,20 @@ class ItemCount extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="row ToDoRow top-buffer">
+                {/* I added this new classes from bootstrap d-flex justify-content-center in the next DIV. You can find this in Boostrap documentation serching FLEX */}
+                <div className="row ToDoRow top-buffer d-flex justify-content-center">
                     <div className="col-lg-8 mb-3 mb-sm-0 ">
-                        <div className="input" className="form-control">
-                            <div className="col-8 col-sm-12 text-center align-middle">
-                               
 
-
-                               
-                                <h5 style={styles}>OUTSTANDING TASQs {this.props.count}
-                                    {/*<button type="button" className="btn btn-outline-info btn-md align-centre">3</button>*/}
-                                </h5>
-                            </div>
+                        {/* I added form-control class in the next div */}
+                        <div className=" col-8 col-sm-12 form-control">
+                            <h5 style={styles}>OUTSTANDING TASQs {this.props.count}
+                                {/*<button type="button" className="btn btn-outline-info btn-md align-centre">3</button>*/}
+                            </h5>
                         </div>
+
                     </div>
                 </div>
             </div>
-          
         );
     }
 }
