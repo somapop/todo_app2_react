@@ -35,7 +35,9 @@ class Item extends React.Component {
                     {!this.props.completed && (
                         //<button className="btn btn-info" disabled={this.props.completed}>
                         <button type="button" className="btn my-primary my-small-btn btn btn-sm" onClick={this.handleComplete}>
-                            DONE</button>
+                           
+                            DONE
+                            </button>
                     )}
 
                 </div>

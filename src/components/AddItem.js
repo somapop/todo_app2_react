@@ -7,7 +7,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginLeft: 25
+    marginLeft: "25px"
 
 }
 
@@ -62,8 +62,8 @@ class AddItem extends React.Component {
                 <div className="form-group mx-sm-3 mb-2">
                     <input type="date" className="form-control" onChange={this.handleDateChange} value={this.state.dateSelected} />
 
-                    <button className="btn my-primary my-small - btn btn btn - sm" style={styles} onClick={this.handleClick} disabled={this.state.newItemText.length === 0}>
-                        Add to list
+                    <button type="button" className="btn my-primary my-small-btn btn btn-sm" style={styles} onClick={this.handleClick} disabled={this.state.newItemText.length === 0}>                       
+                        ADD               
                  </button>
                 </div>
             </form>
