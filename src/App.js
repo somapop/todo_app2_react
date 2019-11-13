@@ -8,6 +8,7 @@ import ItemCount from "./components/ItemCount";
 import AddItem from "./components/AddItem";
 import Item from "./components/Item";
 import Greet from "./components/Greet";
+import Quantity from "./components/Quantity";
 import "./App.css";
 
 class App extends Component {
@@ -80,11 +81,11 @@ class App extends Component {
 
       <div className="container">
 
-        <Header />
+        <Header />  
         <Footer />
-        <Greet />
-
+        <Greet />      
         <AddItem addNewTaskFunc={this.addNewTask} />
+        <Quantity />
         <ItemCount count={this.state.tasks.length} />
 
         <h2 style={styles}>TASQs 2DO</h2>

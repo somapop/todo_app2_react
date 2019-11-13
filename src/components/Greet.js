@@ -20,14 +20,14 @@ function Greet() {
         color: "#FFF",
         backgroundColor: "#E96969",
         textAlign: "center",
-        width: 250,
+        width: 150,
         padding: 20,
         borderRadius: 10,
         fontFamily: "Montserrat",
         color: "white",
         display: "flex",
         justifyContent: "center",
-        alignItems: "right",
+        alignItems: "center",
         flexFlow: "row wrap",
         //display: [
         //'-webkit-box',
@@ -45,7 +45,7 @@ function Greet() {
            
         
 
-            <h2 style={styles} >Good {timeOfDay}!</h2></a>
+            <h3 style={styles} >Good {timeOfDay}!</h3></a>
         </div>
 
     )
