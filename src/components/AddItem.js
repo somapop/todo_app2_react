@@ -28,7 +28,14 @@ class AddItem extends React.Component {
 
     handleClick = (event) => {
         event.preventDefault();
-        this.props.addNewTaskFunc(this.state.newItemText, this.state.dateSelected);
+       
+        if (this.state.newItemText.length === 0) {
+           alert("Please Add a Task")
+        }else {
+            this.props.addNewTaskFunc(this.state.newItemText, this.state.dateSelected);
+        }
+       
+        
         this.setState({
             newItemText: ""
         });
@@ -47,6 +54,8 @@ class AddItem extends React.Component {
         return (
             <form className="form-inline component">
                 <div className="form-group mx-sm-3 mb-2">
+                    
+
                     {/* <div className="component"></div> component class now is in the father element to get all child element with the same aling style */}
                     <input
                         type="text"
@@ -57,12 +66,14 @@ class AddItem extends React.Component {
                         onChange={this.updateNewItemText}
                     ></input>
                 </div>
+                
 
                 {/* this is a comment in JSX */}
                 <div className="form-group mx-sm-3 mb-2">
                     <input type="date" className="form-control" onChange={this.handleDateChange} value={this.state.dateSelected} />
 
-                    <button type="button" className="btn my-primary my-small-btn btn btn-sm" style={styles} onClick={this.handleClick} disabled={this.state.newItemText.length === 0}>                       
+                    <button type="button" className="btn my-primary my-small-btn btn btn-sm" style={styles} onClick={this.handleClick}> 
+                    {/* //disabled={this.state.newItemText.length === 0}                      */}
                         ADD               
                  </button>
                 </div>
