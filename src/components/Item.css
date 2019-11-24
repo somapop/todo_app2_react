@@ -87,16 +87,16 @@ body {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 0.5rem;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
     font-weight: 500;
     line-height: 1.2;
     color: rgb(185, 193, 194);
-    
+
 }
 
 p {
     margin-bottom: 0.5rem;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
     font-weight: 500;
     line-height: 1.2;
     color: rgb(17, 178, 199);
@@ -279,9 +279,9 @@ background-color: rgb(179, 202, 212);
 
 /*  FONT LARGE AND BOLD */
 
-* {
+/* * {
     font-family: 'Montserrat', sans-serif;
-}
+} */
 
 .w900 {
     font-weight: 900;
