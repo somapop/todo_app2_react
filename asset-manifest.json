@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/todo_app2_react/static/css/main.82f1252d.chunk.css",
+    "main.css": "/todo_app2_react/static/css/main.cdba205f.chunk.css",
     "main.js": "/todo_app2_react/static/js/main.e38d9d8c.chunk.js",
     "main.js.map": "/todo_app2_react/static/js/main.e38d9d8c.chunk.js.map",
     "runtime-main.js": "/todo_app2_react/static/js/runtime-main.dbedd5e7.js",
@@ -8,15 +8,15 @@
     "static/js/2.d786813d.chunk.js": "/todo_app2_react/static/js/2.d786813d.chunk.js",
     "static/js/2.d786813d.chunk.js.map": "/todo_app2_react/static/js/2.d786813d.chunk.js.map",
     "index.html": "/todo_app2_react/index.html",
-    "precache-manifest.b8c3df5c3358b122895122313fa1ea7b.js": "/todo_app2_react/precache-manifest.b8c3df5c3358b122895122313fa1ea7b.js",
+    "precache-manifest.754fcf5f38b3eb5fa8ba40709def849c.js": "/todo_app2_react/precache-manifest.754fcf5f38b3eb5fa8ba40709def849c.js",
     "service-worker.js": "/todo_app2_react/service-worker.js",
-    "static/css/main.82f1252d.chunk.css.map": "/todo_app2_react/static/css/main.82f1252d.chunk.css.map",
+    "static/css/main.cdba205f.chunk.css.map": "/todo_app2_react/static/css/main.cdba205f.chunk.css.map",
     "static/media/index.css": "/todo_app2_react/static/media/montserrat-v14-latin-regular.f3fef7e5.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.dbedd5e7.js",
     "static/js/2.d786813d.chunk.js",
-    "static/css/main.82f1252d.chunk.css",
+    "static/css/main.cdba205f.chunk.css",
     "static/js/main.e38d9d8c.chunk.js"
   ]
 }
