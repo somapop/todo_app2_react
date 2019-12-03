@@ -18,22 +18,22 @@ function Greet() {
     //const width = '80%';
     const styles = {
         color: "#FFF",
-        backgroundColor: "#E96969",
+        // backgroundColor: "#E96969",
         textAlign: "center",
-        width: 150,
-        padding: 20,
-        borderRadius: 10,
+        width: 350,
+        padding: 60,
+        borderRadius: 20,
         fontFamily: "Montserrat",
-        color: "white",
+        fontcolor: "white",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexFlow: "row wrap",
-        //display: [
-        //'-webkit-box',
-        //'-webkit-flex',
-        //'-ms-flexbox',
-        //'flex'
+        // display: [
+        // '-webkit-box',
+        // '-webkit-flex',
+        // '-ms-flexbox',
+        // 'flex'
         // ],
 
 
