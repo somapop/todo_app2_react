@@ -71,7 +71,7 @@ console.log("Error getting taks data", err);
   deleteTask = id => {
 
     axios.delete("https://r8cberekcc.execute-api.eu-west-1.amazonaws.com/dev/tasks/" + id)
-      .then((tasks) => {
+      .then(()=> {
         const filteredTasks = this.state.tasks.filter(task => {
       return task.taskId !== id
     });
@@ -130,7 +130,7 @@ console.log("Error getting taks data", err);
         <h2 style={styles}>TASQs 2DO</h2>
         {incompleteTasks.map(task => {
           return (
-            <Item text={task.text} completed={task.completed} key={task.taskId} deleteTaskFunc={this.deleteTask} id={task.id} completeTaskFunc={this.completeTask} date={task.dateCreated} dueBy={task.dateDue} />
+            <Item text={task.text} completed={task.completed} key={task.taskId} deleteTaskFunc={this.deleteTask} id={task.taskId} completeTaskFunc={this.completeTask} date={task.dateCreated} dueBy={task.dateDue} />
           );
         })}
 
